@@ -11,6 +11,9 @@
   --mist: #dcedea;
   --cream: #f3ead0;
   --orange: #bd5210;
+  --cheer: #ffe08a;
+  --cheer-deep: #e3a400;
+  --cheer-ink: #4d3800;
   --display: "Instrument Serif", Georgia, "Times New Roman", serif;
   --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: light;
@@ -63,7 +66,7 @@ p { margin: 0; }
 /* The example conversation */
 .demo { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 24px 60px -30px rgb(14 31 33 / 0.35); overflow: hidden; font-size: 0.95rem; }
 .demo-bar { display: flex; align-items: center; gap: 0.45rem; padding: 0.7rem 1.1rem; border-bottom: 1px solid var(--line); font: 400 1.2rem/1 var(--display); }
-.demo-body { display: flex; flex-direction: column; gap: 0.9rem; padding: 1.2rem 1.2rem 1.4rem; background: var(--paper); min-height: 27rem; }
+.demo-body { display: flex; flex-direction: column; gap: 0.9rem; padding: 1.2rem 1.2rem 1.4rem; background: var(--paper); min-height: 30rem; }
 .demo figcaption { padding: 0.65rem 1.1rem; border-top: 1px solid var(--line); font-size: 0.82rem; color: var(--ink-soft); }
 .bubble { align-self: flex-end; max-width: 86%; background: var(--mist); padding: 0.6rem 0.95rem; border-radius: 18px 18px 6px 18px; }
 .status { display: flex; align-items: center; gap: 0.55rem; color: var(--ink-soft); font-size: 0.88rem; }
@@ -78,6 +81,9 @@ p { margin: 0; }
 .letter p + p { margin-top: 0.7rem; }
 .letter-actions { display: flex; gap: 0.5rem; margin-top: 0.8rem; }
 .letter-actions span { border: 1px solid var(--line); border-radius: 999px; padding: 0.25rem 0.8rem; font-size: 0.82rem; font-weight: 500; color: var(--river); }
+/* Suggested replies: the assistant offers what the student might say next. */
+.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.chips span { border: 1px solid var(--river); border-radius: 999px; padding: 0.3rem 0.85rem; font-size: 0.85rem; font-weight: 500; color: var(--river); background: var(--surface); }
 
 /* The conversation plays once when the page loads. */
 @media (prefers-reduced-motion: no-preference) {
@@ -87,6 +93,7 @@ p { margin: 0; }
   .p3 { animation-delay: 3.2s; }
   .p4 { animation-delay: 5s; }
   .p5 { animation-delay: 6.1s; }
+  .p6 { animation-delay: 7.3s; }
   .dot { animation: pulse 0.9s ease-in-out infinite; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -123,6 +130,24 @@ p { margin: 0; }
 .mock-link { color: var(--river); font-size: 0.9rem; text-decoration: underline; text-underline-offset: 3px; margin-top: 0.3rem; }
 .mock-list { margin: 0.7rem 0 0; padding-left: 1.2rem; display: grid; gap: 0.35rem; color: var(--ink-soft); }
 .mock-list li::marker { color: var(--river-bright); }
+
+/* The mentor list, as the app shows it when a student comes back. */
+.mock.track { background: var(--mist); border-color: transparent; }
+.track-title { font-size: 0.9rem; font-weight: 600; color: var(--river); }
+.track-row { padding: 0.85rem 0; border-top: 1px solid rgb(10 95 94 / 0.15); }
+.track-row:first-of-type { border-top: 0; }
+.track-who { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.7rem; }
+.badge { display: inline-flex; align-items: center; gap: 0.35rem; background: var(--river); color: #fff; border-radius: 999px; padding: 0.15rem 0.7rem; font-size: 0.78rem; font-weight: 600; }
+.badge-gold { background: var(--cheer); color: var(--cheer-ink); }
+.strip { display: flex; align-items: center; gap: 0.35rem; margin-top: 0.5rem; }
+.seg { width: 2.1rem; height: 0.38rem; border-radius: 999px; background: rgb(10 95 94 / 0.2); }
+.seg.on { background: var(--river); }
+.seg.gold { background: rgb(227 164 0 / 0.25); }
+.seg.gold.on { background: var(--cheer-deep); }
+.strip-label { margin-left: 0.3rem; font-size: 0.78rem; font-weight: 500; color: var(--river); }
+.strip-gold { color: var(--cheer-ink); }
+.track-next { margin-top: 0.45rem; font-size: 0.9rem; }
+.track-next em { font-style: normal; font-weight: 500; color: var(--orange); }
 .also { margin-top: clamp(2.5rem, 6vw, 4.5rem); padding-top: 2rem; border-top: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 1rem 3rem; }
 .also p { color: var(--ink-soft); max-width: 42rem; }
 

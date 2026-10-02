@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CampusOtter: find a faculty mentor and know what to say</title>
-<meta name="description" content="CampusOtter is a chat assistant for students at the Rollins School of Public Health. It finds faculty whose research matches your interests, helps you write a first email, and gets you ready for the meeting.">
+<meta name="description" content="CampusOtter is a chat assistant for students at the Rollins School of Public Health. It finds faculty whose research matches your interests and your program's rules, helps you write a first email, gets you ready for the meeting, and keeps track of where things stand.">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261002c">
+<link rel="stylesheet" href="styles.css?v=20261002d">
 <script>
   // The address of the live app. The sign-in buttons point here. If this is
   // ever emptied, they read "Ask about the pilot" and open an email instead.
@@ -88,6 +88,7 @@
         <p>Dear Dr. Rivera,<br>I am a first-year MPH student in Epidemiology. Your target trial study of preterm birth is close to what I hope to do for my thesis…</p>
         <div class="letter-actions" aria-hidden="true"><span>Copy</span><span>Open in my mail app</span></div>
       </div>
+      <p class="chips play p6" aria-label="Suggested replies"><span>I sent it</span><span>Tailor my CV for Dr. Rivera</span><span>Help me prepare for the meeting</span></p>
     </div>
     <figcaption>An example conversation. The names are made up.</figcaption>
   </figure>
@@ -108,14 +109,14 @@
 
 <section id="how" class="how wrap">
   <h2>From "I don't know who to ask" to a meeting on the calendar</h2>
-  <p class="section-lede">You start with a short profile: your name, program, department, and research interests. If you upload your CV, it keeps a one-paragraph summary of your background and not the CV. After that it is one conversation, and you can come back to earlier ones.</p>
+  <p class="section-lede">You start with a short profile: your name, program, department, and research interests. If you upload your CV, it keeps a one-paragraph summary of your background and not the CV. After that it guides you one step at a time, suggests what to say next, and remembers where things stand with each person, so you can pick up days later on any device.</p>
 
   <ol class="steps">
     <li class="step">
       <div class="step-copy">
         <span class="step-number" aria-hidden="true">1</span>
         <h3>Find faculty whose work fits</h3>
-        <p>Describe a topic, a method, or a population in your own words. CampusOtter searches the expertise of 265 Rollins faculty and shows who matches and why, with a link to each person's official page. If you already have someone in mind, ask about them by name.</p>
+        <p>Describe a topic, a method, or a population in your own words. CampusOtter searches the expertise of 265 Rollins faculty and shows who matches and why, with a link to each person's official page. It knows your program's rule on who can be your mentor, counts secondary appointments, and lists the people who qualify first. If you already have someone in mind, ask about them by name.</p>
       </div>
       <div class="mock">
         <p class="mock-line"><strong>Dr. Maya Rivera</strong>, Associate Professor, Epidemiology</p>
@@ -124,6 +125,7 @@
         <hr>
         <p class="mock-line"><strong>Dr. Daniel Okafor</strong>, Professor, Global Health</p>
         <p class="mock-soft">Matched on: maternal mortality, quasi-experimental methods</p>
+        <p class="mock-soft">Secondary appointment in Epidemiology, so eligible under your program's rule</p>
         <p class="mock-link">Official faculty page</p>
       </div>
     </li>
@@ -132,7 +134,7 @@
       <div class="step-copy">
         <span class="step-number" aria-hidden="true">2</span>
         <h3>Write a first email worth answering</h3>
-        <p>It reads the professor's recent work and your CV, then drafts a short email that says why you are writing to this person in particular. It suggests honest edits to your CV for the same reader, and gives you the revised CV as a Word file. You copy the draft or open it in your own mail app.</p>
+        <p>It reads the professor's papers from the last five years, checked against ORCID and PubMed, and your CV, then drafts a short email that says why you are writing to this person in particular and asks for 30 minutes. Drop your CV into the conversation and it suggests honest edits for the same reader, with the revised CV as a Word file. You copy the draft or open it in your own mail app.</p>
       </div>
       <div class="mock letter">
         <dl>
@@ -149,7 +151,7 @@
       <div class="step-copy">
         <span class="step-number" aria-hidden="true">3</span>
         <h3>Walk in prepared</h3>
-        <p>Before the meeting you get a one-page brief: which of their papers to read first, how to describe your own work in two or three sentences, questions to ask, and what you need from them under your program's rules.</p>
+        <p>Before the meeting you get a one-page brief: which of their papers to read first, how to describe your own work in two or three sentences, questions to ask, and what you need from them under your program's rules, as a short table of what to do by when.</p>
       </div>
       <div class="mock">
         <p class="mock-line"><strong>Before you meet Dr. Rivera</strong></p>
@@ -161,11 +163,32 @@
         </ul>
       </div>
     </li>
+
+    <li class="step">
+      <div class="step-copy">
+        <span class="step-number" aria-hidden="true">4</span>
+        <h3>Follow up, and keep track</h3>
+        <p>After the meeting it drafts the thank-you that records what was agreed and lists what you owe by when. Your mentor list keeps where things stand with each person, your next step, and short notes on what you discussed, so a conversation days later starts where you left off. When a professor says yes, it celebrates with you and moves on to what your program needs next.</p>
+      </div>
+      <div class="mock track" aria-label="An example of the mentor list">
+        <p class="track-title">Where you left off</p>
+        <div class="track-row">
+          <p class="track-who"><strong>Dr. Rivera</strong> <span class="badge badge-gold"><span aria-hidden="true">🎉</span> Agreed to be your advisor, Oct 9</span></p>
+          <p class="strip" aria-label="Step 5 of 5"><span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg on"></span><span class="seg gold on"></span><span class="strip-label strip-gold">Agreed</span></p>
+          <p class="track-next"><strong>Next:</strong> Ask program staff which thesis forms are due <em>by Oct 20</em></p>
+        </div>
+        <div class="track-row">
+          <p class="track-who"><strong>Dr. Okafor</strong> <span class="badge">Emailed, Sep 30</span></p>
+          <p class="strip" aria-label="Step 2 of 5"><span class="seg on"></span><span class="seg on"></span><span class="seg"></span><span class="seg"></span><span class="seg gold"></span><span class="strip-label">Reach out</span></p>
+          <p class="track-next"><strong>Next:</strong> Send a short nudge if there is no reply <em>by Oct 14</em></p>
+        </div>
+      </div>
+    </li>
   </ol>
 
   <div class="also">
     <h3>And the paperwork</h3>
-    <p>Ask what the practicum, a thesis, or a capstone requires in your department, for you and for the faculty member. Answers come from Rollins's own catalog and policy pages, with the source and the date it was retrieved, and a reminder to confirm with your department's program staff.</p>
+    <p>Ask what the practicum, a thesis, or a capstone requires in your department, for you and for the faculty member. Answers come from Rollins's own catalog and policy pages, with the source and the date it was retrieved, and a reminder to confirm with your department's program staff. The same rules shape who it suggests and what the first email asks for.</p>
   </div>
 </section>
 
@@ -193,6 +216,7 @@
       <li>Sign-in is limited to your institution's email addresses.</li>
       <li>A monthly spending limit is built in, so the cost can't run away.</li>
       <li>Program requirements come from your own published catalog and handbooks, and your staff can review them.</li>
+      <li>You can see how it is used in counts only: how many students reach each step and which faculty are approached most. Never their conversations.</li>
     </ul>
     <div class="actions">
       <a class="button" href="mailto:grantotter07@gmail.com?subject=CampusOtter%20for%20our%20school">Write to us</a>
