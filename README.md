@@ -12,6 +12,9 @@ served by GitHub Pages from the `main` branch. There is nothing to build.
 | `logo.png` | The logo. The original is in the app repository under `design/logo/`. |
 | `favicon.png`, `apple-touch-icon.png` | The logo at small sizes, for browser tabs and phones. |
 | `og_image.png` | The picture shown when the link is shared. Made by `tools/make_og_image.py`. |
+| `campusotter-promo.mp4` | The one-minute promo video (1080p, 32 MB). It is the file the video project in the app repository's `video/` folder renders to `out/campusotter.mp4`. To replace it, copy the new file over this one. |
+| `promo-poster.jpg` | The still shown before the video plays: the frame at 13 seconds. |
+| `campusotter-promo.en.vtt` | English captions for the video, timed from the video project's `audio/timeline.json`. Update it if the narration changes. |
 
 ## Things to keep an eye on
 

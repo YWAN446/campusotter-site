@@ -101,6 +101,12 @@ p { margin: 0; }
 }
 @keyframes pulse { 50% { opacity: 0.35; } }
 
+/* The promo video. Nothing is downloaded until the visitor presses play. */
+.film { padding-block: clamp(3.5rem, 8vw, 6rem); border-top: 1px solid var(--line); }
+.film-frame { margin: clamp(1.8rem, 4vw, 2.8rem) 0 0; }
+.film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--ink); border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 24px 60px -30px rgb(14 31 33 / 0.35); }
+.film figcaption { margin-top: 0.8rem; font-size: 0.88rem; color: var(--ink-soft); }
+
 /* How it works */
 .how { padding-block: clamp(3.5rem, 8vw, 6.5rem); border-top: 1px solid var(--line); }
 .how > h2 { max-width: 20ch; }
