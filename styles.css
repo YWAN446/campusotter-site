@@ -1,0 +1,156 @@
+/* CampusOtter site. Same palette and type as the app: GrantOtter's ink and
+   river teal on a cool off-white, orange kept for small accents. */
+:root {
+  --ink: #0e1f21;
+  --ink-soft: #4a5c5e;
+  --paper: #f4f7f6;
+  --surface: #ffffff;
+  --line: #d3dddb;
+  --river: #0a5f5e;
+  --river-bright: #0e8a89;
+  --mist: #dcedea;
+  --cream: #f3ead0;
+  --orange: #bd5210;
+  --display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1.0625rem/1.6 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--river); text-underline-offset: 3px; }
+a:hover { color: var(--river-bright); }
+:focus-visible { outline: 2px solid var(--river-bright); outline-offset: 3px; border-radius: 4px; }
+h1, h2 { font-family: var(--display); font-weight: 400; margin: 0; }
+h1 { font-size: clamp(2.9rem, 6.2vw, 4.9rem); line-height: 1; letter-spacing: -0.01em; }
+h2 { font-size: clamp(2.1rem, 4vw, 3.1rem); line-height: 1.06; }
+h3 { font: 600 1.3rem/1.3 var(--sans); margin: 0; }
+p { margin: 0; }
+
+.wrap { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 1rem; top: 1rem; background: var(--surface); padding: 0.5rem 0.8rem; z-index: 20; }
+
+/* Top bar */
+.top { position: sticky; top: 0; z-index: 10; background: rgb(244 247 246 / 0.92); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+.top-row { display: flex; align-items: center; gap: 1.5rem; padding-block: 0.7rem; }
+.brand { display: flex; align-items: center; gap: 0.5rem; color: var(--ink); text-decoration: none; font: 400 1.55rem/1 var(--display); }
+.brand:hover { color: var(--ink); }
+.top-nav { display: flex; gap: 1.6rem; margin-left: auto; font-size: 0.95rem; }
+.top-nav a { color: var(--ink-soft); text-decoration: none; }
+.top-nav a:hover { color: var(--river); }
+
+.button { display: inline-block; background: var(--river); color: #fff; font-weight: 600; text-decoration: none; padding: 0.8rem 1.5rem; border-radius: 999px; }
+.button:hover { background: var(--river-bright); color: #fff; }
+.button-small { padding: 0.5rem 1.05rem; font-size: 0.92rem; white-space: nowrap; }
+.link { font-weight: 500; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem 1.5rem; margin-top: 2rem; }
+.fine { margin-top: 1.4rem; font-size: 0.92rem; color: var(--ink-soft); }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; padding-block: clamp(3rem, 8vw, 6.5rem) clamp(3.5rem, 8vw, 6rem); }
+.lede { margin-top: 1.6rem; font-size: 1.2rem; line-height: 1.55; color: var(--ink-soft); max-width: 34rem; }
+
+/* The example conversation */
+.demo { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 24px 60px -30px rgb(14 31 33 / 0.35); overflow: hidden; font-size: 0.95rem; }
+.demo-bar { display: flex; align-items: center; gap: 0.45rem; padding: 0.7rem 1.1rem; border-bottom: 1px solid var(--line); font: 400 1.2rem/1 var(--display); }
+.demo-body { display: flex; flex-direction: column; gap: 0.9rem; padding: 1.2rem 1.2rem 1.4rem; background: var(--paper); min-height: 27rem; }
+.demo figcaption { padding: 0.65rem 1.1rem; border-top: 1px solid var(--line); font-size: 0.82rem; color: var(--ink-soft); }
+.bubble { align-self: flex-end; max-width: 86%; background: var(--mist); padding: 0.6rem 0.95rem; border-radius: 18px 18px 6px 18px; }
+.status { display: flex; align-items: center; gap: 0.55rem; color: var(--ink-soft); font-size: 0.88rem; }
+.dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--river-bright); }
+.people { margin: 0.6rem 0 0; padding-left: 1.25rem; display: grid; gap: 0.55rem; }
+.people li::marker { color: var(--river-bright); }
+.people span { display: block; color: var(--ink-soft); font-size: 0.88rem; }
+.letter { background: var(--surface); border-left: 3px solid var(--river); border-radius: 0 12px 12px 0; padding: 0.95rem 1.1rem; box-shadow: 0 1px 3px rgb(14 31 33 / 0.08); }
+.letter dl { display: grid; grid-template-columns: auto 1fr; gap: 0.15rem 0.8rem; margin: 0 0 0.7rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--line); font-size: 0.88rem; }
+.letter dt { color: var(--ink-soft); }
+.letter dd { margin: 0; }
+.letter p + p { margin-top: 0.7rem; }
+.letter-actions { display: flex; gap: 0.5rem; margin-top: 0.8rem; }
+.letter-actions span { border: 1px solid var(--line); border-radius: 999px; padding: 0.25rem 0.8rem; font-size: 0.82rem; font-weight: 500; color: var(--river); }
+
+/* The conversation plays once when the page loads. */
+@media (prefers-reduced-motion: no-preference) {
+  .play { opacity: 0; transform: translateY(8px); animation: arrive 0.5s ease-out forwards; }
+  .p1 { animation-delay: 0.5s; }
+  .p2 { animation: searching 1.9s ease-out 1.3s forwards; }
+  .p3 { animation-delay: 3.2s; }
+  .p4 { animation-delay: 5s; }
+  .p5 { animation-delay: 6.1s; }
+  .dot { animation: pulse 0.9s ease-in-out infinite; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .status { display: none; }
+}
+@keyframes arrive { to { opacity: 1; transform: none; } }
+/* The status line shows while the answer is on its way, then makes room for it. */
+@keyframes searching {
+  0% { opacity: 0; transform: translateY(8px); max-height: 2rem; }
+  20%, 85% { opacity: 1; transform: none; max-height: 2rem; }
+  100% { opacity: 0; transform: none; max-height: 0; margin-top: -0.9rem; }
+}
+@keyframes pulse { 50% { opacity: 0.35; } }
+
+/* How it works */
+.how { padding-block: clamp(3.5rem, 8vw, 6.5rem); border-top: 1px solid var(--line); }
+.how > h2 { max-width: 20ch; }
+.section-lede { margin-top: 1.2rem; max-width: 40rem; font-size: 1.15rem; color: var(--ink-soft); }
+.steps { list-style: none; margin: clamp(2.5rem, 6vw, 4.5rem) 0 0; padding: 0; display: grid; gap: clamp(2.5rem, 6vw, 4.5rem); }
+.step { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 4.5rem); align-items: center; }
+.step:nth-child(even) .step-copy { order: 2; }
+.step-number { display: block; font: 400 4.2rem/0.9 var(--display); color: var(--river-bright); margin-bottom: 0.8rem; }
+.step-copy p { margin-top: 0.8rem; color: var(--ink-soft); max-width: 30rem; }
+.mock { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 1.3rem 1.4rem; font-size: 0.95rem; }
+.mock.letter { border: 0; border-left: 3px solid var(--river); border-radius: 0 16px 16px 0; padding: 1.3rem 1.4rem; }
+.mock hr { border: 0; border-top: 1px solid var(--line); margin: 1rem 0; }
+.mock-soft { color: var(--ink-soft); font-size: 0.9rem; margin-top: 0.15rem; }
+.mock-link { color: var(--river); font-size: 0.9rem; text-decoration: underline; text-underline-offset: 3px; margin-top: 0.3rem; }
+.mock-list { margin: 0.7rem 0 0; padding-left: 1.2rem; display: grid; gap: 0.35rem; color: var(--ink-soft); }
+.mock-list li::marker { color: var(--river-bright); }
+.also { margin-top: clamp(2.5rem, 6vw, 4.5rem); padding-top: 2rem; border-top: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 1rem 3rem; }
+.also p { color: var(--ink-soft); max-width: 42rem; }
+
+/* What it won't do: the one dark band on the page */
+.limits { background: var(--ink); color: var(--paper); padding-block: clamp(3.5rem, 8vw, 6rem); }
+.limits .section-lede { color: #b9c9c7; }
+.limit-list { list-style: none; margin: 2.8rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 3.5rem; }
+.limit-list li { padding: 1.3rem 0; border-top: 1px solid rgb(244 247 246 / 0.18); color: #b9c9c7; }
+.limit-list strong { display: block; color: var(--paper); font-weight: 600; margin-bottom: 0.25rem; }
+
+/* Schools */
+.schools { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+.schools p { margin-top: 1.1rem; max-width: 42rem; color: var(--ink-soft); }
+.schools h2 + p { margin-top: 1.4rem; }
+.mascot { width: 220px; background: var(--mist); border-radius: 28px; padding: 1.2rem 1.2rem 0; }
+.plain { margin: 1.4rem 0 0; padding: 0; list-style: none; max-width: 42rem; }
+.plain li { padding: 0.7rem 0; border-top: 1px solid var(--line); }
+.plain li:last-child { border-bottom: 1px solid var(--line); }
+
+/* Faculty and privacy */
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 6vw, 5rem); padding-block: clamp(3rem, 7vw, 5.5rem); border-top: 1px solid var(--line); }
+.two h2 { font-size: clamp(1.9rem, 3.2vw, 2.5rem); }
+.two p { margin-top: 1.1rem; color: var(--ink-soft); }
+
+/* Footer */
+.foot { border-top: 1px solid var(--line); padding-block: 2.2rem 3rem; font-size: 0.92rem; color: var(--ink-soft); }
+.foot-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 1rem 2.5rem; align-items: start; }
+.foot .brand { font-size: 1.35rem; }
+.foot p { max-width: 38rem; }
+
+@media (max-width: 860px) {
+  .top-nav { display: none; }
+  .top-row .button-small { margin-left: auto; }
+  .hero, .step, .also, .schools, .two, .limit-list, .foot-row { grid-template-columns: minmax(0, 1fr); }
+  .step:nth-child(even) .step-copy { order: 0; }
+  .demo-body { min-height: 0; }
+  .mascot { width: 150px; }
+}

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusOtter: find a faculty mentor and know what to say</title>
+<meta name="description" content="CampusOtter is a chat assistant for students at the Rollins School of Public Health. It finds faculty whose research matches your interests, helps you write a first email, and gets you ready for the meeting.">
+<!-- Remove the next line when the site is ready for search engines. -->
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CampusOtter">
+<meta property="og:title" content="CampusOtter: find a faculty mentor and know what to say">
+<meta property="og:description" content="A chat assistant that helps public health students find faculty whose research matches their interests, write a first email, and prepare for the meeting.">
+<meta property="og:image" content="https://ywan446.github.io/campusotter-site/og_image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f4f7f6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261002">
+<script>
+  // The address of the live app. While this is empty, the sign-in buttons
+  // read "Ask about the pilot" and open an email instead. Once the app is
+  // live, put its address here, for example "https://campusotter.vercel.app".
+  window.CAMPUSOTTER_APP_URL = "";
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to the content</a>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="./" aria-label="CampusOtter home">
+      <img src="logo-mark.svg" alt="" width="34" height="34">
+      <span>CampusOtter</span>
+    </a>
+    <nav class="top-nav" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#schools">For schools</a>
+      <a href="#faculty">For faculty</a>
+    </nav>
+    <a class="button button-small" data-app-link data-live-label="Sign in"
+       href="mailto:grantotter42@gmail.com?subject=CampusOtter%20pilot">Ask about the pilot</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero wrap">
+  <div class="hero-copy">
+    <h1>Find your faculty mentor. Know what to say.</h1>
+    <p class="lede">CampusOtter is a chat assistant for students at the Rollins School of Public Health. Tell it what you want to work on. It finds faculty whose research matches, helps you write a first email worth answering, and gets you ready for the meeting.</p>
+    <div class="actions">
+      <a class="button" data-app-link data-live-label="Sign in with your Emory email"
+         href="mailto:grantotter42@gmail.com?subject=CampusOtter%20pilot">Ask about the pilot</a>
+      <a class="link" href="#how">See how it works</a>
+    </div>
+    <p class="fine">In pilot at the Rollins School of Public Health.</p>
+  </div>
+
+  <figure class="demo" aria-label="An example conversation in CampusOtter">
+    <div class="demo-bar">
+      <img src="logo-mark.svg" alt="" width="22" height="22">
+      <span>CampusOtter</span>
+    </div>
+    <div class="demo-body">
+      <p class="bubble play p1">I'm a first-year MPH student in Epidemiology. Who works on maternal health and causal inference?</p>
+      <p class="status play p2" aria-hidden="true"><span class="dot"></span>Searching faculty…</p>
+      <div class="answer play p3">
+        <p>Two Rollins faculty match well.</p>
+        <ol class="people">
+          <li>
+            <strong>Dr. Maya Rivera</strong>, Associate Professor, Epidemiology
+            <span>Matched on: preterm birth, target trial emulation, Georgia birth records</span>
+          </li>
+          <li>
+            <strong>Dr. Daniel Okafor</strong>, Professor, Global Health
+            <span>Matched on: maternal mortality, quasi-experimental methods</span>
+          </li>
+        </ol>
+      </div>
+      <p class="bubble play p4">Draft a first email to Dr. Rivera.</p>
+      <div class="letter play p5">
+        <dl>
+          <dt>To</dt><dd>maya.rivera@example.edu</dd>
+          <dt>Subject</dt><dd><strong>MPH student interested in your preterm birth work</strong></dd>
+        </dl>
+        <p>Dear Dr. Rivera,<br>I am a first-year MPH student in Epidemiology. Your target trial study of preterm birth is close to what I hope to do for my thesis…</p>
+        <div class="letter-actions" aria-hidden="true"><span>Copy</span><span>Open in my mail app</span></div>
+      </div>
+    </div>
+    <figcaption>An example conversation. The names are made up.</figcaption>
+  </figure>
+</section>
+
+<section id="how" class="how wrap">
+  <h2>From "I don't know who to ask" to a meeting on the calendar</h2>
+  <p class="section-lede">You start by telling CampusOtter your program, department, and research interests, and you can add your CV. After that it is one conversation.</p>
+
+  <ol class="steps">
+    <li class="step">
+      <div class="step-copy">
+        <span class="step-number" aria-hidden="true">1</span>
+        <h3>Find faculty whose work fits</h3>
+        <p>Describe a topic, a method, or a population in your own words. CampusOtter searches the expertise of 265 Rollins faculty and shows who matches and why, with a link to each person's official page.</p>
+      </div>
+      <div class="mock">
+        <p class="mock-line"><strong>Dr. Maya Rivera</strong>, Associate Professor, Epidemiology</p>
+        <p class="mock-soft">Matched on: preterm birth, target trial emulation, Georgia birth records</p>
+        <p class="mock-link">Official faculty page</p>
+        <hr>
+        <p class="mock-line"><strong>Dr. Daniel Okafor</strong>, Professor, Global Health</p>
+        <p class="mock-soft">Matched on: maternal mortality, quasi-experimental methods</p>
+        <p class="mock-link">Official faculty page</p>
+      </div>
+    </li>
+
+    <li class="step">
+      <div class="step-copy">
+        <span class="step-number" aria-hidden="true">2</span>
+        <h3>Write a first email worth answering</h3>
+        <p>It reads the professor's recent work and your CV, then drafts a short email that says why you are writing to this person in particular. It suggests honest edits to your CV for the same reader. You copy the draft or open it in your own mail app.</p>
+      </div>
+      <div class="mock letter">
+        <dl>
+          <dt>To</dt><dd>maya.rivera@example.edu</dd>
+          <dt>Subject</dt><dd><strong>MPH student interested in your preterm birth work</strong></dd>
+        </dl>
+        <p>Dear Dr. Rivera,</p>
+        <p>I am a first-year MPH student in Epidemiology. Your target trial study of preterm birth is close to what I hope to do for my thesis. Last summer I cleaned and analyzed clinic survey data in R.</p>
+        <p>Would you have 20 minutes in the next few weeks to talk about whether I could contribute?</p>
+      </div>
+    </li>
+
+    <li class="step">
+      <div class="step-copy">
+        <span class="step-number" aria-hidden="true">3</span>
+        <h3>Walk in prepared</h3>
+        <p>Before the meeting you get a one-page brief: which of their papers to read first, how to describe your own work in two or three sentences, questions to ask, and what you need from them under your program's rules.</p>
+      </div>
+      <div class="mock">
+        <p class="mock-line"><strong>Before you meet Dr. Rivera</strong></p>
+        <ul class="mock-list">
+          <li>Read first: two recent papers, by title</li>
+          <li>Your work in three sentences</li>
+          <li>Five questions to ask</li>
+          <li>What your thesis needs from an advisor</li>
+        </ul>
+      </div>
+    </li>
+  </ol>
+
+  <div class="also">
+    <h3>And the paperwork</h3>
+    <p>Ask what an APE, a thesis, or a capstone requires, for you and for the faculty member. Answers come from the program's own published text, with the source and the date it was retrieved, and a reminder to confirm with your department's program staff.</p>
+  </div>
+</section>
+
+<section class="limits">
+  <div class="wrap">
+    <h2>What it won't do</h2>
+    <p class="section-lede">A student repeats what the assistant says to a professor. So it is strict about what it says.</p>
+    <ul class="limit-list">
+      <li><strong>It won't guess about faculty.</strong> Everything it says about a person comes from their profile. If the profile doesn't say it, the assistant tells you so and points to the official page.</li>
+      <li><strong>It won't say who is taking students.</strong> It has no way to know. Finding out is what the email is for.</li>
+      <li><strong>It won't pad your CV.</strong> It reorders, cuts, and rephrases what you did. It never adds an experience or a skill you didn't give it.</li>
+      <li><strong>It won't send anything.</strong> Drafts stay drafts until you send them yourself, from your own account.</li>
+      <li><strong>It won't write a mass mailing.</strong> It steers you toward two or three well-matched people and a separate email for each.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="schools" class="schools wrap">
+  <img class="mascot" src="otter-mascot.svg" alt="" width="220" height="220">
+  <div>
+    <h2>For schools and departments</h2>
+    <p>CampusOtter runs on the Research Map behind <a href="https://grantotter.com/">GrantOtter</a>: a profile of each faculty member's expertise, publications, and funded work, built from public sources. The same map that helps your faculty find grants and collaborators helps your students find mentors.</p>
+    <p>We plan to offer CampusOtter to the students of schools and departments that have a GrantOtter institution subscription. The pilot is running at the Rollins School of Public Health.</p>
+    <ul class="plain">
+      <li>Sign-in is limited to your institution's email addresses.</li>
+      <li>A monthly spending limit is built in, so the cost can't run away.</li>
+      <li>Program requirements come from your own published handbooks, and your staff can review them.</li>
+    </ul>
+    <div class="actions">
+      <a class="button" href="mailto:grantotter42@gmail.com?subject=CampusOtter%20for%20our%20school">Write to us</a>
+      <a class="link" href="https://grantotter.com/#institution">GrantOtter for institutions</a>
+    </div>
+  </div>
+</section>
+
+<section id="faculty" class="two wrap">
+  <div>
+    <h2>For faculty</h2>
+    <p>Your profile is built from public sources, such as your faculty page and your published work. Before a profile reaches CampusOtter, salary figures, award amounts, percent effort, review scores, and unpublished plans are removed.</p>
+    <p>Students see what you work on and a link to your official page, and they are told to check that page before relying on a detail. The assistant never tells a student that you are, or are not, taking students.</p>
+    <p>To correct your profile or have it removed, write to <a href="mailto:grantotter42@gmail.com?subject=CampusOtter%20faculty%20profile">grantotter42@gmail.com</a>.</p>
+  </div>
+  <div>
+    <h2>For students: what it keeps</h2>
+    <p>CampusOtter keeps your Emory email address and counts of how you use it, such as how many messages you send. It does not keep your profile, your CV, your messages, or what you search for. Those are saved only in your own browser, and signing out removes them.</p>
+    <p>To produce replies, your messages, profile, and CV are sent to Anthropic's Claude API, and the topics you search for are sent to Voyage AI.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <a class="brand" href="./" aria-label="CampusOtter home">
+      <img src="logo-mark.svg" alt="" width="28" height="28">
+      <span>CampusOtter</span>
+    </a>
+    <p>Made by the team behind <a href="https://grantotter.com/">GrantOtter</a>. CampusOtter is an independent project. It is not an official service of Emory University or the Rollins School of Public Health.</p>
+    <p><a href="mailto:grantotter42@gmail.com">grantotter42@gmail.com</a></p>
+  </div>
+</footer>
+
+<script>
+  // Point the sign-in buttons at the app once its address is set above.
+  (function () {
+    var url = window.CAMPUSOTTER_APP_URL;
+    if (!url) return;
+    document.querySelectorAll("[data-app-link]").forEach(function (link) {
+      link.href = url;
+      link.textContent = link.getAttribute("data-live-label");
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="CampusOtter">
+  <!-- body curled into a C; the lower end tapers into the tail -->
+  <path d="M82 20.400A48 48 0 1 0 82 103.600Q98 95 94 75Q86 86 70 82.800A24 24 0 1 1 70 41.200z" fill="#0a5f5e"/>
+  <!-- cream belly along the inside of the curl -->
+  <path d="M77 43A28.500 28.500 0 1 0 66 89.400" fill="none" stroke="#f3ead0" stroke-width="7.500" stroke-linecap="round"/>
+  <!-- head, looking right -->
+  <circle cx="71" cy="17" r="5" fill="#0a5f5e"/>
+  <circle cx="71.500" cy="17.500" r="2.200" fill="#0e1f21"/>
+  <ellipse cx="86" cy="31" rx="20" ry="14.500" transform="rotate(14 86 31)" fill="#0a5f5e"/>
+  <path d="M91.500 34c.5-6.500 7-10 12.500-8 4 1.500 5.500 6 2.500 10-3 4.500-9 6.500-15.500 5.500z" fill="#f3ead0"/>
+  <ellipse cx="103.500" cy="30.500" rx="4" ry="3.200" transform="rotate(14 103.500 30.500)" fill="#0e1f21"/>
+  <circle cx="88" cy="26" r="2.600" fill="#0e1f21"/>
+  <path d="M99.500 38.500l9 3.500M98 40.500l7.500 6" fill="none" stroke="#0e1f21" stroke-width="1.300" stroke-linecap="round"/>
+  <!-- a book held against the belly -->
+  <g transform="rotate(-10 60 63)">
+    <rect x="46" y="52" width="27" height="21" rx="2.500" fill="#bd5210"/>
+    <path d="M50.500 52v21" stroke="#f3ead0" stroke-width="1.600"/>
+  </g>
+  <ellipse cx="46" cy="60" rx="6.500" ry="4.200" transform="rotate(25 46 60)" fill="#0a5f5e"/>
+  <ellipse cx="50" cy="74" rx="6.500" ry="4.200" transform="rotate(-25 50 74)" fill="#0a5f5e"/>
+</svg>

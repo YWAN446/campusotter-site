@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="CampusOtter">
+  <!-- body, standing upright -->
+  <path d="M30 120c0-30 10-52 30-52s30 22 30 52z" fill="#0a5f5e"/>
+  <path d="M44 120c0-24 6-40 16-40s16 16 16 40z" fill="#f3ead0"/>
+  <!-- ears, small and low -->
+  <circle cx="31" cy="33" r="6.500" fill="#0a5f5e"/>
+  <circle cx="89" cy="33" r="6.500" fill="#0a5f5e"/>
+  <circle cx="31" cy="33" r="2.800" fill="#0e1f21"/>
+  <circle cx="89" cy="33" r="2.800" fill="#0e1f21"/>
+  <!-- head: wide and flat on top -->
+  <path d="M27 46c0-17 14-27 33-27s33 10 33 27-14 27-33 27-33-10-33-27z" fill="#0a5f5e"/>
+  <!-- whiskers -->
+  <path d="M40 55L19 50M40 58.500L18 59M40 62L20 68M80 55l21-5M80 58.500l22 .5M80 62l20 6" fill="none" stroke="#0e1f21" stroke-width="1.500" stroke-linecap="round"/>
+  <!-- whisker pads and chin -->
+  <ellipse cx="60" cy="62" rx="13" ry="8.500" fill="#f3ead0"/>
+  <circle cx="50" cy="56" r="11" fill="#f3ead0"/>
+  <circle cx="70" cy="56" r="11" fill="#f3ead0"/>
+  <!-- nose and mouth -->
+  <path d="M51 47.500c0-3.500 4-5 9-5s9 1.500 9 5c0 3.500-4.500 6.500-9 6.500s-9-3-9-6.500z" fill="#0e1f21"/>
+  <path d="M60 54v4m0 0c-2.500 4-7 4-9.500 1.500M60 58c2.500 4 7 4 9.500 1.500" fill="none" stroke="#0e1f21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- eyes: small and set wide -->
+  <circle cx="42" cy="41" r="3.300" fill="#0e1f21"/>
+  <circle cx="78" cy="41" r="3.300" fill="#0e1f21"/>
+  <!-- book held to the chest -->
+  <rect x="41" y="84" width="38" height="28" rx="3" fill="#bd5210"/>
+  <path d="M47 84v28" stroke="#f3ead0" stroke-width="1.800"/>
+  <ellipse cx="40" cy="95" rx="7.500" ry="5" transform="rotate(20 40 95)" fill="#0a5f5e"/>
+  <ellipse cx="80" cy="95" rx="7.500" ry="5" transform="rotate(-20 80 95)" fill="#0a5f5e"/>
+</svg>
