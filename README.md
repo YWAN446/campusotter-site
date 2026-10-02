@@ -9,9 +9,8 @@ served by GitHub Pages from the `main` branch. There is nothing to build.
 |---|---|
 | `index.html` | The page. All the words are here. |
 | `styles.css` | Colors, type, and layout. |
-| `logo-mark.svg` | The logo: an otter curled into a C, holding a book. |
-| `favicon.svg`, `apple-touch-icon.png` | The logo on a tile, for browser tabs and phones. |
-| `otter-mascot.svg` | The standing otter used in the schools section. |
+| `logo.png` | The logo. The original is in the app repository under `design/logo/`. |
+| `favicon.png`, `apple-touch-icon.png` | The logo at small sizes, for browser tabs and phones. |
 | `og_image.png` | The picture shown when the link is shared. Made by `tools/make_og_image.py`. |
 
 ## Before announcing the site
