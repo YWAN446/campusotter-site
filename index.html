@@ -21,10 +21,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20261002b">
 <script>
-  // The address of the live app. While this is empty, the sign-in buttons
-  // read "Ask about the pilot" and open an email instead. Once the app is
-  // live, put its address here, for example "https://campusotter.vercel.app".
-  window.CAMPUSOTTER_APP_URL = "";
+  // The address of the live app. The sign-in buttons point here. If this is
+  // ever emptied, they read "Ask about the pilot" and open an email instead.
+  window.CAMPUSOTTER_APP_URL = "https://campusotter.vercel.app";
 </script>
 </head>
 <body>
@@ -58,7 +57,7 @@
          href="mailto:grantotter42@gmail.com?subject=CampusOtter%20pilot">Ask about the pilot</a>
       <a class="link" href="#how">See how it works</a>
     </div>
-    <p class="fine">In pilot at the Rollins School of Public Health.</p>
+    <p class="fine">In pilot at the Rollins School of Public Health. You sign in with a code sent to your Emory email address.</p>
   </div>
 
   <figure class="demo" aria-label="An example conversation in CampusOtter">
@@ -98,14 +97,14 @@
 
 <section id="how" class="how wrap">
   <h2>From "I don't know who to ask" to a meeting on the calendar</h2>
-  <p class="section-lede">You start by telling CampusOtter your program, department, and research interests, and you can add your CV. After that it is one conversation.</p>
+  <p class="section-lede">You start with a short profile: your name, program, department, and research interests, and your CV if you want to add it. After that it is one conversation, and you can come back to earlier ones.</p>
 
   <ol class="steps">
     <li class="step">
       <div class="step-copy">
         <span class="step-number" aria-hidden="true">1</span>
         <h3>Find faculty whose work fits</h3>
-        <p>Describe a topic, a method, or a population in your own words. CampusOtter searches the expertise of 265 Rollins faculty and shows who matches and why, with a link to each person's official page.</p>
+        <p>Describe a topic, a method, or a population in your own words. CampusOtter searches the expertise of 265 Rollins faculty and shows who matches and why, with a link to each person's official page. If you already have someone in mind, ask about them by name.</p>
       </div>
       <div class="mock">
         <p class="mock-line"><strong>Dr. Maya Rivera</strong>, Associate Professor, Epidemiology</p>
@@ -155,7 +154,7 @@
 
   <div class="also">
     <h3>And the paperwork</h3>
-    <p>Ask what the practicum, a thesis, or a capstone requires, for you and for the faculty member. Answers come from the program's own published text, with the source and the date it was retrieved, and a reminder to confirm with your department's program staff.</p>
+    <p>Ask what the practicum, a thesis, or a capstone requires in your department, for you and for the faculty member. Answers come from Rollins's own catalog and policy pages, with the source and the date it was retrieved, and a reminder to confirm with your department's program staff.</p>
   </div>
 </section>
 
@@ -182,7 +181,7 @@
     <ul class="plain">
       <li>Sign-in is limited to your institution's email addresses.</li>
       <li>A monthly spending limit is built in, so the cost can't run away.</li>
-      <li>Program requirements come from your own published handbooks, and your staff can review them.</li>
+      <li>Program requirements come from your own published catalog and handbooks, and your staff can review them.</li>
     </ul>
     <div class="actions">
       <a class="button" href="mailto:grantotter42@gmail.com?subject=CampusOtter%20for%20our%20school">Write to us</a>
@@ -200,7 +199,7 @@
   </div>
   <div>
     <h2>For students: what it keeps</h2>
-    <p>CampusOtter keeps your Emory email address, the short profile you fill in (name, program, department, and research interests), and counts of how you use it, such as how many messages you send. It does not keep your CV, your messages, or what you search for. Those are saved only in your own browser, and signing out removes them from it.</p>
+    <p>CampusOtter keeps your Emory email address, the short profile you fill in (name, program, department, and research interests), and counts of how you use it, such as how many messages you send. It does not keep your CV, your messages, or what you search for. Your CV and your earlier conversations are saved only in your own browser, so you can return to them there, and signing out removes them from it.</p>
     <p>To produce replies, your messages, profile, and CV are sent to Anthropic's Claude API, and the topics you search for are sent to Voyage AI.</p>
   </div>
 </section>

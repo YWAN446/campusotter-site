@@ -15,9 +15,10 @@ served by GitHub Pages from the `main` branch. There is nothing to build.
 
 ## Before announcing the site
 
-1. **Turn on the sign-in buttons.** Near the top of `index.html`, set
-   `window.CAMPUSOTTER_APP_URL` to the address of the live app. Until then the
-   buttons read "Ask about the pilot" and open an email.
+1. **Check the sign-in buttons.** They point to the live app at
+   https://campusotter.vercel.app. The address is set near the top of
+   `index.html` as `window.CAMPUSOTTER_APP_URL`. Change it there if the app
+   moves to its own domain.
 2. **Let search engines in.** Delete the line
    `<meta name="robots" content="noindex">` from `index.html`.
 3. **Check the claims.** The schools section says CampusOtter is planned to
