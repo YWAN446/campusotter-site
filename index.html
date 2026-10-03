@@ -275,21 +275,22 @@
     });
   })();
   // Show the bar and the footer line about gifts once the payment link is set
-  // above. Closing the bar is remembered in this browser.
+  // above. Closing the bar keeps it closed in this browser for a day.
   (function () {
     var url = window.CAMPUSOTTER_SUPPORT_URL;
     if (!url) return;
     document.querySelectorAll("[data-support-link]").forEach(function (link) { link.href = url; });
     document.querySelector("[data-support]").hidden = false;
     var key = "campusotter-support-closed";
-    var closed = false;
-    try { closed = localStorage.getItem(key) === "1"; } catch (e) {}
-    if (closed) return;
+    var day = 24 * 60 * 60 * 1000;
+    var closedAt = 0;
+    try { closedAt = Number(localStorage.getItem(key)) || 0; } catch (e) {}
+    if (Date.now() - closedAt < day) return;
     var bar = document.querySelector("[data-support-banner]");
     bar.hidden = false;
     document.querySelector("[data-support-close]").addEventListener("click", function () {
       bar.hidden = true;
-      try { localStorage.setItem(key, "1"); } catch (e) {}
+      try { localStorage.setItem(key, String(Date.now())); } catch (e) {}
     });
   })();
 </script>

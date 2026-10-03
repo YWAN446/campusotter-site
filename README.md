@@ -32,7 +32,7 @@ Vercel). There is nothing to build.
    cost (the "CampusOtter support" product in the GrantOtter Stripe account).
    While it is empty, the closable bar at the top and the footer line that
    offer it are hidden. The bar was the owner's choice (2026-10-02) so that
-   visitors see it; closing it is remembered in the visitor's browser.
+   visitors see it; closing it keeps it closed in the visitor's browser for a day.
 
 ## Changing the page
 
