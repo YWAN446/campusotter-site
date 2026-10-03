@@ -1,7 +1,9 @@
 # CampusOtter site
 
 The public website for CampusOtter. It is one page of plain HTML and CSS,
-served by GitHub Pages from the `main` branch. There is nothing to build.
+served by GitHub Pages from the `main` branch at https://www.campusotter.app
+(the `CNAME` file holds that name; the bare campusotter.app is the app, on
+Vercel). There is nothing to build.
 
 ## Files
 
@@ -19,7 +21,7 @@ served by GitHub Pages from the `main` branch. There is nothing to build.
 ## Things to keep an eye on
 
 1. **Check the sign-in buttons.** They point to the live app at
-   https://campusotter.vercel.app. The address is set near the top of
+   https://campusotter.app. The address is set near the top of
    `index.html` as `window.CAMPUSOTTER_APP_URL`. Change it there if the app
    moves to its own domain.
 2. **Check the claims.** The schools section says CampusOtter is planned to
