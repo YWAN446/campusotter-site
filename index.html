@@ -17,19 +17,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261002d">
+<link rel="stylesheet" href="styles.css?v=20261002e">
 <script>
   // The address of the live app. The sign-in buttons point here. If this is
   // ever emptied, they read "Ask about the pilot" and open an email instead.
   window.CAMPUSOTTER_APP_URL = "https://campusotter.vercel.app";
-  // A Stripe payment link for gifts towards the running cost. The footer line
-  // that offers it stays hidden while this is empty.
+  // A Stripe payment link for gifts towards the running cost. The bar at the
+  // top and the footer line that offer it stay hidden while this is empty.
   window.CAMPUSOTTER_SUPPORT_URL = "https://donate.stripe.com/28E28q0wN5Nwag79a60Ny00";
 </script>
 </head>
 <body>
 
 <a class="skip" href="#main">Skip to the content</a>
+
+<div class="notice" data-support-banner hidden>
+  <div class="wrap notice-row">
+    <p>CampusOtter is free for students and runs on a small budget. If you would like to help cover the cost, you can <a data-support-link href="#">support it</a>. $10 pays for about 380 replies.</p>
+    <button type="button" data-support-close aria-label="Close this note">&times;</button>
+  </div>
+</div>
 
 <header class="top">
   <div class="wrap top-row">
@@ -267,12 +274,23 @@
       link.textContent = link.getAttribute("data-live-label");
     });
   })();
-  // Show the line about gifts once the payment link is set above.
+  // Show the bar and the footer line about gifts once the payment link is set
+  // above. Closing the bar is remembered in this browser.
   (function () {
     var url = window.CAMPUSOTTER_SUPPORT_URL;
     if (!url) return;
-    document.querySelector("[data-support-link]").href = url;
+    document.querySelectorAll("[data-support-link]").forEach(function (link) { link.href = url; });
     document.querySelector("[data-support]").hidden = false;
+    var key = "campusotter-support-closed";
+    var closed = false;
+    try { closed = localStorage.getItem(key) === "1"; } catch (e) {}
+    if (closed) return;
+    var bar = document.querySelector("[data-support-banner]");
+    bar.hidden = false;
+    document.querySelector("[data-support-close]").addEventListener("click", function () {
+      bar.hidden = true;
+      try { localStorage.setItem(key, "1"); } catch (e) {}
+    });
   })();
 </script>
 </body>

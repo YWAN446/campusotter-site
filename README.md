@@ -28,8 +28,9 @@ served by GitHub Pages from the `main` branch. There is nothing to build.
 3. **The gift link.** `window.CAMPUSOTTER_SUPPORT_URL` near the top of
    `index.html` holds the Stripe payment link for gifts towards the running
    cost (the "CampusOtter support" product in the GrantOtter Stripe account).
-   While it is empty, the footer line that offers it is hidden. It is kept to
-   the footer on purpose: students are not asked for money.
+   While it is empty, the closable bar at the top and the footer line that
+   offer it are hidden. The bar was the owner's choice (2026-10-02) so that
+   visitors see it; closing it is remembered in the visitor's browser.
 
 ## Changing the page
 

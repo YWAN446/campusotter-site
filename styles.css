@@ -42,6 +42,15 @@ p { margin: 0; }
 .skip { position: absolute; left: -999px; }
 .skip:focus { left: 1rem; top: 1rem; background: var(--surface); padding: 0.5rem 0.8rem; z-index: 20; }
 
+/* A closable note about gifts, above the top bar. Hidden until the link is set. */
+.notice { background: var(--mist); border-bottom: 1px solid rgb(10 95 94 / 0.15); font-size: 0.92rem; }
+.notice[hidden] { display: none; }
+.notice-row { display: flex; align-items: center; gap: 1rem; padding-block: 0.5rem; }
+.notice p { color: var(--ink); }
+.notice a { font-weight: 600; }
+.notice button { margin-left: auto; flex: none; width: 2rem; height: 2rem; border: 0; border-radius: 50%; background: transparent; color: var(--ink-soft); font-size: 1.35rem; line-height: 1; cursor: pointer; }
+.notice button:hover { background: rgb(10 95 94 / 0.12); color: var(--river); }
+
 /* Top bar */
 .top { position: sticky; top: 0; z-index: 10; background: rgb(244 247 246 / 0.92); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
 .top-row { display: flex; align-items: center; gap: 1.5rem; padding-block: 0.7rem; }
