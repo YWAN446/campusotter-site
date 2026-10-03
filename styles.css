@@ -52,7 +52,8 @@ p { margin: 0; }
 .notice button:hover { background: rgb(10 95 94 / 0.12); color: var(--river); }
 
 /* Top bar */
-.top { position: sticky; top: 0; z-index: 10; background: rgb(244 247 246 / 0.92); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+/* A solid background on purpose: with backdrop-filter, iOS Safari painted a white box inside the rounded Sign in button. */
+.top { position: sticky; top: 0; z-index: 10; background: var(--paper); border-bottom: 1px solid var(--line); }
 .top-row { display: flex; align-items: center; gap: 1.5rem; padding-block: 0.7rem; }
 .brand img, .demo-bar img { border-radius: 22%; }
 .brand { display: flex; align-items: center; gap: 0.5rem; color: var(--ink); text-decoration: none; font: 400 1.55rem/1 var(--display); }
