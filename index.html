@@ -22,6 +22,9 @@
   // The address of the live app. The sign-in buttons point here. If this is
   // ever emptied, they read "Ask about the pilot" and open an email instead.
   window.CAMPUSOTTER_APP_URL = "https://campusotter.vercel.app";
+  // A Stripe payment link for gifts towards the running cost. The footer line
+  // that offers it stays hidden while this is empty.
+  window.CAMPUSOTTER_SUPPORT_URL = "";
 </script>
 </head>
 <body>
@@ -250,6 +253,7 @@
     </a>
     <p>Made by the team behind <a href="https://grantotter.com/">GrantOtter</a>. CampusOtter is an independent project. It is not an official service of Emory University or the Rollins School of Public Health.</p>
     <p><a href="mailto:grantotter07@gmail.com">grantotter07@gmail.com</a></p>
+    <p class="support" data-support hidden>CampusOtter is free for students. If you would like to help cover the cost of running it, you can <a data-support-link href="#">support it</a>. $10 pays for about 380 replies.</p>
   </div>
 </footer>
 
@@ -262,6 +266,13 @@
       link.href = url;
       link.textContent = link.getAttribute("data-live-label");
     });
+  })();
+  // Show the line about gifts once the payment link is set above.
+  (function () {
+    var url = window.CAMPUSOTTER_SUPPORT_URL;
+    if (!url) return;
+    document.querySelector("[data-support-link]").href = url;
+    document.querySelector("[data-support]").hidden = false;
   })();
 </script>
 </body>

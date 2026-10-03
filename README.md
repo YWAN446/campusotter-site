@@ -25,6 +25,11 @@ served by GitHub Pages from the `main` branch. There is nothing to build.
 2. **Check the claims.** The schools section says CampusOtter is planned to
    come with a GrantOtter institution subscription. Change it if the plan
    changes.
+3. **The gift link.** `window.CAMPUSOTTER_SUPPORT_URL` near the top of
+   `index.html` holds the Stripe payment link for gifts towards the running
+   cost (the "CampusOtter support" product in the GrantOtter Stripe account).
+   While it is empty, the footer line that offers it is hidden. It is kept to
+   the footer on purpose: students are not asked for money.
 
 ## Changing the page
 

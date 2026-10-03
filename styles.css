@@ -177,6 +177,8 @@ p { margin: 0; }
 .foot-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 1rem 2.5rem; align-items: start; }
 .foot .brand { font-size: 1.35rem; }
 .foot p { max-width: 38rem; }
+.foot .support { grid-column: 2; }
+.foot .support[hidden] { display: none; }
 
 @media (max-width: 860px) {
   .top-nav { display: none; }
@@ -185,4 +187,5 @@ p { margin: 0; }
   .step:nth-child(even) .step-copy { order: 0; }
   .demo-body { min-height: 0; }
   .mascot { width: 150px; }
+  .foot .support { grid-column: auto; }
 }
