@@ -32,7 +32,9 @@
 <script>
   // The address of the live app. The sign-in buttons point here. If this is
   // ever emptied, they read "Ask about the pilot" and open an email instead.
-  window.CAMPUSOTTER_APP_URL = "https://campusotter.app";
+  // It names the chat page, which asks a visitor who is not signed in to sign
+  // in. The bare campusotter.app sends such a visitor back to this site.
+  window.CAMPUSOTTER_APP_URL = "https://campusotter.app/chat";
   // A Stripe payment link for gifts towards the running cost. The bar at the
   // top and the footer line that offer it stay hidden while this is empty.
   window.CAMPUSOTTER_SUPPORT_URL = "https://donate.stripe.com/28E28q0wN5Nwag79a60Ny00";

@@ -19,13 +19,15 @@ Vercel). There is nothing to build.
 | `campusotter-promo.en.vtt` | English captions for the video, timed from the video project's `audio/timeline.json`. Update it if the narration changes. |
 | `robots.txt` | Tells search engines they may read the whole site and where the sitemap is. |
 | `sitemap.xml` | The list of pages for search engines. There is one page. Add a line here if the site gets a second one. |
+| `googlec8e857d4364e7a35.html` | Proves to Google Search Console that the owner controls this site. Do not delete it: the site would drop out of the owner's Search Console. |
 
 ## Things to keep an eye on
 
-1. **Check the sign-in buttons.** They point to the live app at
-   https://campusotter.app. The address is set near the top of
-   `index.html` as `window.CAMPUSOTTER_APP_URL`. Change it there if the app
-   moves to its own domain.
+1. **Check the sign-in buttons.** They point to the live app's chat page,
+   https://campusotter.app/chat, which asks a visitor who is not signed in to
+   sign in. They must not point to the bare https://campusotter.app: the app
+   sends a signed-out visitor from there back to this site. The address is set
+   near the top of `index.html` as `window.CAMPUSOTTER_APP_URL`.
 2. **Check the claims.** The schools section says CampusOtter is planned to
    come with a GrantOtter institution subscription. Change it if the plan
    changes.
